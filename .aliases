@@ -1,0 +1,110 @@
+alias emacs='emacs -nw'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+alias cd..="cd .."
+
+alias ls='ls --color=tty'
+alias l='ls -lah'
+alias la='ls -lAh'
+alias lh='ls -A | egrep '\''^\.'\'
+alias ll='ls -lh'
+alias lsa='ls -lah'
+
+alias tt="~/.dotfiles/scripts/tmux.sh"
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias ts='tmux new-session -s'
+alias tl='tmux list-sessions'
+alias tksv='tmux kill-server'
+alias tkss='tmux kill-session -t'
+
+alias gits="git status"
+alias gitp="git push -u origin master"
+alias gitc="git commit -m"
+alias gita="git add ."
+alias gitac="git commit -a -m"
+alias gitd="git diff"
+alias gitr="git rm -f"
+alias gitl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
+alias gitls="git ls-tree -r master --name-only"
+alias git+="git remote set-url --add --push origin"
+alias gitch="git checkout"
+alias gitchb="git checkout -b"
+alias gitrmold="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
+
+alias a='fasd -a'
+alias d='fasd -d'
+alias f='fasd -f'
+alias s='fasd -si'
+alias sd='fasd -sid'
+alias sf='fasd -sif'
+alias z='fasd_cd -d'
+alias zz='fasd_cd -d -i'
+
+# sudo openvpn
+alias ovpn="sudo openvpn"
+
+# colored grep
+alias grep="grep --color=tty -d skip"
+alias fgrep='fgrep --color=tty'
+alias egrep='egrep --color=tty'
+
+# confirm before overwriting something
+alias cp="cp -i"
+
+# find a process
+alias p="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# Enable aliases to be sudo’ed
+alias sudo="sudo "
+
+# Get week number
+alias week="date +%V"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+alias src="source ~/.zshrc"
+
+alias map="xargs -n1"
+
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+
+
+edithosts(){
+    if [[ $# -eq 0 ]] ; then sudo nano /etc/hosts;
+    else sudo nano /etc/hosts.d/$1; fi
+}
+alias hosts=edithosts
+
+alias calc="bc"
+
+alias dos2unix-r='find . -type f -exec dos2unix {} \;'
+
+alias xclip='xclip -selection clipboard'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+alias i3c='sudo vim ~/.dotfiles/i3/i3.conf'
+
+# make new folder and join it
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
+
+alias mkcd="mkcd"
+
+alias whatsupdate="apt list --upgradable"
+
+alias nautilus="thunar"
+
+alias .-="clear"
+alias tmp="cd /tmp"

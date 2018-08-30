@@ -1,0 +1,89 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "array-bracket-spacing": "error",
+        "arrow-body-style": "error",
+        "arrow-parens": "error",
+        "brace-style": "error",
+        "comma-style": "error",
+        "dot-notation": "error",
+        "generator-star-spacing": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "keyword-spacing": "error",
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "newline-per-chained-call": "error",
+        "no-confusing-arrow": "error",
+        "no-duplicate-imports": "error",
+        "no-iterator": "error",
+        "no-param-reassign": "error",
+        "no-plusplus": "error",
+        "no-restricted-syntax": [
+            "error",
+            "DoWhileStatement",
+            "ForStatement",
+            "ForInStatement",
+            "ForOfStatement",
+            "WhileStatement"
+        ],
+        "no-useless-escape": "error",
+        "no-var": "error",
+        "no-whitespace-before-property": "error",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "object-shorthand": "error",
+        "padded-blocks": [
+            "error",
+            "never"
+        ],
+        "prefer-arrow-callback": "error",
+        "prefer-const": [
+            "error",
+            {
+                "destructuring": "any",
+                "ignoreReadBeforeAssign": false
+            }
+        ],
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "space-before-blocks": "error",
+        "space-before-function-paren": "error",
+        "space-infix-ops": "error",
+        "space-in-parens": "error",
+        "spaced-comment": "error"
+    }
+}
